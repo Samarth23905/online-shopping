@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommercewebsiute</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style2.css">
+    </head>
+<body>
+    <div>
+      <div class="top1">
+        <button id="logo" onclick="refreshPag()"><img src="logo.jpeg" alt="logo" id="logo1"></button>
+        <i class="fa-sharp fa-solid fa-pot-food"></i>
+            <button id="search">Search</button>
+            <button id="signin" onclick="sign()">Sign Up</button>
+            <a href="#cart" id="add-to-cart">View Cart</a>
+            <button id="contact">Contact Us</button>
+      </div>
+        <div id="searchbar">
+          <input type="text" id="searchInput" placeholder="Search for a name...">
+          <button id="searchButton">Search ⌕</button>
+
+        </div>
+        <div id="nameList" style="display:none;">
+          <ul>
+              <li>A Curse So Dark And Lonely</li>
+              <li>Empire Of Shadows</li>
+              <li>Empire Ruins</li>
+              <li>Paper And Fire</li>
+              <li>Sorcerer To the Crown</li>
+              <li>Ink and Bone</li>
+          </ul>
+       </div>
+  
+      <div id="booksMenu">
+        <a href="#"><img src="book1.jpeg" alt="" id="book1"></a> 
+        <a href="#"><img src="book2.jpeg" alt="" id="book2"></a>
+        <a href="#"><img src="book3.jpeg" alt="" id="book3"></a>
+        <a href="#"><img src="book4.jpeg" alt="" id="book4"></a>
+        <a href="#"><img src="book5.jpeg" alt="" id="book5"></a>
+        <a href="#"><img src="book6.jpeg" alt="" id="book6"></a>
+        <a href="#"><img src="book7.jpeg" alt="" id="book7"></a>
+        <a href="#"><img src="book8.jpeg" alt="" id="book8"></a>
+      </div>
+      <hr>
+      <div class="wish">
+        <h3 id="the">
+           Hey there give a try for these!!
+        </h3>
+        <div id="books">
+         <a href="#"><img src="book9.jpeg" alt="" id="books1">
+            <div id="books11">
+              <h1 id="books12">About</h1>
+            </div>
+         </a>
+         <a href="#"><img src="book10.jpeg" alt="" id="books2">
+          <div id="books21">
+            <h1 id="books22">About</h1>
+          </div>
+        </a>
+         <a href="#"><img src="book11.jpeg" alt="" id="books3">
+          <div id="books31">
+            <h1 id="books32">About</h1>
+          </div>
+        </a>
+         <a href="#"><img src="book12.jpeg" alt="" id="books4">
+          <div id="books41">
+            <h1 id="books42">About</h1>
+          </div>
+        </a>
+        </div>
+      </div>
+      <hr>
+      <div id="view">
+         <div id="block">
+          <img src="book1.avif" alt="food1" id="boo1">
+          <div id="block1">
+            <h2 id="block11">A Curse So Dark And Lonely</h2>
+            <p id="price1">Price:₹369</p>
+            <button class="c1" onclick="addToCart('A Curse So Dark And Lonely', 369)">Add to Cart</button>
+          </div>
+        </div>
+         <div id="block">
+          <img src="book2.avif" alt="food2" id="boo2">
+          <div id="block2">
+            <h2 id="block12">Empire Of Shadows</h2>
+            <p id="price2">Price:₹1624</p>
+            <button class="c2" onclick="addToCart('Empire Of Shadows', 1624)">Add to Cart</button>
+          </div>
+        </div>
+         <div id="block">
+          <img src="book3.avif" alt="food3" id="boo3">
+          <div id="block3">
+            <h2 id="block13">Empire Ruins</h2>
+            <p id="price3">Price:₹1404</p>
+            <button class="c3" onclick="addToCart('Empire Ruins', 1404)">Add to Cart</button>
+          </div>
+        </div>
+         <div id="block">
+          <img src="book4.avif" alt="food4" id="boo4">
+          <div id="block4">
+            <h2 id="block14">Paper And Fire</h2>
+            <p id="price4">Price:₹1350</p>
+            <button class="c4" onclick="addToCart('Paper And Fire', 1350)" >Add to Cart</button>
+          </div>
+        </div>
+         <div id="block">
+          <img src="book5.avif" alt="food5" id="boo5">
+          <div id="block5">
+            <h2 id="block15">Sorcerer To the Crown</h2>
+            <p id="price5">Price:₹861</p>
+            <button class="c5" onclick="addToCart('Sorcerer To the Crown', 861)" >Add to Cart</button>
+          </div>
+        </div>
+         <div id="block">
+          <img src="book6.avif" alt="food6" id="boo6">
+          <div id="block6">
+            <h2 id="block16">Ink and Bone</h2>
+            <p id="price6">Price:₹861</p>
+            <button class="c6" onclick="addToCart('Ink and Bone', 863)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <section id="cart">
+        <h2>Cart</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: ₹0</p>
+        <button onclick="buy()" class="btn" id="buyNowBtn">Buy Now</button>
+      </section>
+  
+      <div id="footer">
+       <p id="limited">© 2024 OnlineShoping Limited</p>
+       <div>
+       <ul id="Contactus">
+         <li>
+           <a href="contact" id="x11">Contact Us</a>
+         </li>
+         <br>
+         <li>
+           <a href="help" id="x1">Help & Support</a>
+         </li>
+         <br>
+         <li>
+           <a href="partner" id="x1">Partner with Us</a>
+         </li>
+         <br>
+         <li>
+           <a href="Ride" id="x1">Ride with Us</a>
+         </li>
+       </ul>
+       </div>
+       <div>
+        <ul id="contactus2">
+         <li>
+           <a href="legal" id="y11">Legal</a>
+         </li>
+         <li>
+           <a href="terms" id="y1">Terms & Conditiond</a>
+         </li>
+         <br>
+         <li>
+           <a href="cookie" id="y1">Cookie policy</a>
+         </li>
+         <br>
+         <li>
+           <a href="privacy" id="y1">Privacy Policy</a>
+         </li>
+         <br>
+         <li>
+           <a href="investor" id="y1">Investor Relations</a>
+         </li>
+        </ul>
+        <p id="links">
+           Social Links
+           <br>
+           <i class="fa-brands fa-linkedin linkedin"></i>
+           <i class="fa-brands fa-instagram instagram"></i>
+           <i class="fa-brands fa-facebook facebook"></i>
+           <i class="fa-brands fa-pinterest pintrest"></i>
+           <i class="fa-brands fa-square-x-twitter"></i>
+        </p>
+        </div>
+      </div>
+<script src="script2.js"></script>
+</body>
+</html>
